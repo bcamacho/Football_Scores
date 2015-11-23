@@ -3,8 +3,7 @@
     package="barqsoft.footballscores" >
 
     <uses-permission
-        android:name="android.permission.INTERNET"
-        android:maxSdkVersion="22" />
+        android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -21,6 +20,16 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".service.WidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+
         <provider
             android:name=".ScoresProvider"
             android:authorities="barqsoft.footballscores" />
@@ -34,6 +43,10 @@
                 android:value="barqsoft.footballscores.MainActivity" />
         </activity>
         <service android:name=".service.myFetchService" />
+
+
+
+
     </application>
 
 </manifest>
