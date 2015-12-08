@@ -19,6 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/home_crest_description"
                 android:id="@+id/home_crest"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -26,8 +27,9 @@
                 android:layout_gravity="center"
                 android:textSize="@dimen/TeamNames"
                 android:gravity="center"
-                android:text="@string/test_text"
-                android:id="@+id/home_name"/>
+                android:text="@string/test"
+                android:id="@+id/home_name"
+                android:contentDescription="@string/hometeam_content_description"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -38,19 +40,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/test_text"
+                android:text="@string/test"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="@dimen/Score"
-                android:id="@+id/score_textview"/>
+                android:id="@+id/score_textview"
+                android:contentDescription="default_score_scription"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/test_text"
+                android:text="@string/test"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:id="@+id/data_textview"/>
+                android:id="@+id/data_textview"
+                android:contentDescription="@string/default_game_match_time"/>
 
         </LinearLayout>
         <LinearLayout
@@ -62,15 +66,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/away_crest_description"
                 android:id="@+id/away_crest"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="@string/test_text"
+                android:text="@string/test"
                 android:textSize="@dimen/TeamNames"
-                android:id="@+id/away_name"/>
+                android:id="@+id/away_name"
+                android:contentDescription="@string/opposing_content_description"/>
         </LinearLayout>
     </LinearLayout>
     <FrameLayout

@@ -1,54 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5sp"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:background="@color/blue03"
-    android:orientation="vertical" >
-
-    <RelativeLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
-
-        <Button
-            android:id="@+id/sync_button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:text="" />
-    </RelativeLayout>
+    android:id="@+id/rl_widget">
 
     <LinearLayout
-        android:id="@+id/contentContainer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/buttonContainer"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:padding="8dp" >
+                  android:layout_width="fill_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="horizontal"
+                  android:background="@color/blue03">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:paddingBottom="5dp"
-            android:text=""
-            android:textColor="#fcfcfc"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="5"
-            android:text=""
-            android:textColor="#fcfcfc"
-            android:textSize="13sp"
-            android:textStyle="normal" />
+            <ImageView
+                android:id="@+id/home_crest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_icon"
+                android:contentDescription="@string/hometeam_iv_content_description"/>
+
+            <TextView
+                android:id="@+id/home_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:padding="5dp"
+                android:text="@string/hometeam_description"
+                android:contentDescription="@string/hometeam_content_description"
+                tools:ignore="NewApi"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/match_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_score"
+                android:textSize="36sp"
+                android:contentDescription="@string/default_score_scription"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/match_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_game_match_time"
+                android:textSize="18sp"
+                android:contentDescription="@string/default_game_match_time"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_games"
+                android:id="@+id/btn_view_game"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:contentDescription="@string/view_games_description"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/away_crest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_icon"
+                android:contentDescription="@string/opposing_team_iv_content_description"/>
+
+            <TextView
+                android:id="@+id/away_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:padding="5dp"
+                android:text="@string/opposing_description"
+                android:contentDescription="@string/opposing_content_description"
+                tools:ignore="NewApi"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </RelativeLayout>
