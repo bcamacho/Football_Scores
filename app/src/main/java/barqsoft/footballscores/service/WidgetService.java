@@ -75,8 +75,8 @@ public class WidgetService extends RemoteViewsService {
      } else {
         views.setTextViewText(R.id.home_name, "");
         views.setTextViewText(R.id.away_name, "");
-        views.setTextViewText(R.id.match_score, "No Game");
-        views.setTextViewText(R.id.match_time, "Currently there is no game");
+        views.setTextViewText(R.id.match_score, String.valueOf(R.string.no_game));
+        views.setTextViewText(R.id.match_time, String.valueOf(R.string.no_game_status_message));
     }
     cursor.close();
     // Create an Intent to launch ExampleActivity
